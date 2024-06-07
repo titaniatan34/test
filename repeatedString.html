@@ -1,0 +1,21 @@
+<main>
+    <input type="text" id="input">
+    <button id="button" onclick="printInput()">send</button>
+    <p id="output"></p>
+
+</main>
+<script>
+    const output = document.getElementById('output');
+    const str = document.getElementById('input');
+    
+    function printInput() {
+    const inputValue = str.value; 
+    const arr = inputValue.split(''); 
+    let outputTxt = ''; 
+    for (let counter = 0; counter < arr.length; counter++) {
+      outputTxt += `String ke ${counter + 1} = ${arr[counter]},\n`;
+    }
+    document.getElementById("output").innerHTML = outputTxt;
+  }  
+
+</script>
